@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+
 
 ## Project info
 **URL**: https://focus-quest-project.lovable.app

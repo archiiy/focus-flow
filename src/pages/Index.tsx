@@ -1,11 +1,15 @@
 import { useFocusSession } from "@/hooks/useFocusSession";
+import { useTheme } from "@/hooks/useTheme";
 import StatsBar from "@/components/StatsBar";
 import SessionPicker from "@/components/SessionPicker";
 import FocusTimer from "@/components/FocusTimer";
 import SessionComplete from "@/components/SessionComplete";
 import StreakDisplay from "@/components/StreakDisplay";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Index = () => {
+  const { isDark, toggle: toggleTheme } = useTheme();
+
   const {
     stats,
     sessionState,
@@ -26,7 +30,10 @@ const Index = () => {
     <div className="min-h-screen bg-background scanline">
       <div className="max-w-3xl mx-auto px-4 py-8">
         {/* Header */}
-        <header className="text-center mb-8">
+        <header className="text-center mb-8 relative">
+          <div className="absolute right-0 top-0">
+            <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
+          </div>
           <h1 className="font-pixel text-xl text-foreground glow-text mb-1 tracking-wider">
             FOCUSQUEST
           </h1>

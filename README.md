@@ -1,8 +1,6 @@
 
 
-## Project info
-**URL**: https://focus-quest-project.lovable.app
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+
 
 
 ## How can I edit this code?
